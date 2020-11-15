@@ -1,0 +1,13 @@
+.formError {
+  border: 1px solid var(--color-input-error);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--color-input-error);
+  display: flex;
+  align-items: center;
+}
+
+.errorIcon {
+  margin-right: 0.25rem;
+}

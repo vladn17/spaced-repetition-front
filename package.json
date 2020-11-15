@@ -1,0 +1,141 @@
+{
+  "name": "spaced-repetition",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "clsx": "^1.1.1",
+    "formik": "^2.2.5",
+    "framer-motion": "^2.9.4",
+    "graphql": "^14.7.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-focus-on": "^3.5.0",
+    "react-router-dom": "^5.2.0",
+    "xlsx": "^0.16.8",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "^3.1.4",
+    "@graphql-codegen/cli": "^1.19.1",
+    "@graphql-codegen/typescript": "^1.17.11",
+    "@graphql-codegen/typescript-operations": "^1.17.9",
+    "@svgr/webpack": "^5.4.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/yup": "^0.29.9",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "autoprefixer": "^10.0.2",
+    "camelcase": "^6.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.1",
+    "css-loader": "^5.0.1",
+    "dotenv-webpack": "^3.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.1",
+    "mini-css-extract-plugin": "^1.3.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.1.7",
+    "postcss-dark-theme-class": "^0.5.1",
+    "postcss-loader": "^4.0.4",
+    "postcss-nested": "^5.0.1",
+    "postcss-normalize": "^9.0.0",
+    "prettier": "^2.1.2",
+    "size-plugin": "^2.0.1",
+    "source-map-explorer": "^2.5.0",
+    "speed-measure-webpack-plugin": "^1.3.3",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.0.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0",
+    "workbox-precaching": "^5.1.4",
+    "workbox-webpack-plugin": "^5.1.4"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "test": "jest --watch",
+    "test:cov": "jest --coverage",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "prettier --write"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-nested": {},
+      "postcss-dark-theme-class": {
+        "darkSelector": ".dark",
+        "lightSelector": ".light"
+      },
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions",
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.css$": "<rootDir>/config/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/fileTransform.js"
+    },
+    "moduleNameMapper": {
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "clearMocks": true
+  }
+}

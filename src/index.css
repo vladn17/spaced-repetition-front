@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+  line-height: 1.25;
+  --color-primary: #7f5af0;
+  --color-input-focus: #6645cc;
+
+  --color-text: #000000;
+  --color-text-secondary: #4a5059;
+  --color-background: #d1d1e9;
+  --color-background-secondary: #d1d1e9;
+  --color-icons: #000000;
+  --background-secondary: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  --form-background: linear-gradient(-90deg, #e0ecfc 7%, #bcbcdd 100%);
+  --input-background: #fffffe;
+  --color-input-error: #830803;
+  --card-front-background: var(--color-primary);
+  --card-back-background: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #fffffe;
+    --color-text-secondary: #94a1b2;
+    --color-background: #232946;
+    --color-background-secondary: #242629;
+    --color-icons: #fffffe;
+    --background-secondary: #242629;
+    --form-background: #232946;
+    --input-background: #242629;
+    --color-input-error: #ff9b97;
+    --card-front-background: var(--color-primary);
+    --card-back-background: var(--color-background-secondary);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}

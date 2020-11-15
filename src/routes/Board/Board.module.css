@@ -1,0 +1,61 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+  width: 100%;
+}
+
+.boardDeck {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 12.5rem;
+  padding: 1.25rem;
+  align-items: center;
+  border-radius: 0.25rem;
+  height: 14.5rem;
+  background: var(--background-secondary);
+  box-shadow: 0px 0px 2px 0px rgba(127, 90, 240, 0.4),
+    0px 1px 2px 0px rgba(127, 90, 240, 0.4);
+}
+
+.deckLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.deckTitle {
+  margin: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+  overflow: hidden;
+  cursor: default;
+}
+
+.createNew {
+  border-style: dashed;
+  border-color: var(--color-primary);
+}
+
+.createIcon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.startIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.listIcon {
+  width: 2rem;
+  height: 2rem;
+}

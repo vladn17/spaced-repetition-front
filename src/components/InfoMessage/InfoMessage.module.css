@@ -1,0 +1,11 @@
+.infoMessage {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+
+  & a {
+    color: var(--color-primary);
+    margin: 0 0.5rem;
+  }
+}

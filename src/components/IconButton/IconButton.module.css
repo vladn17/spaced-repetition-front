@@ -1,0 +1,33 @@
+.iconButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  color: var(--color-icons);
+
+  &:hover {
+    background-color: #ffffff4d;
+  }
+
+  &:focus {
+    box-shadow: #fffffed9 0px 0px 1px 2px;
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: default;
+  }
+}

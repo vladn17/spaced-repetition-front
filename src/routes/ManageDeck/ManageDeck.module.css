@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.deckData {
+  min-width: 5rem;
+}
+
+.deckActions {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.deckName {
+  margin: 0.5rem 0;
+  word-break: break-word;
+}
+
+.cardsTotal {
+  color: var(--color-text-secondary);
+}

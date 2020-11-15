@@ -1,0 +1,15 @@
+.unAuthApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-background-secondary);
+}
+
+.formWrapper {
+  background: var(--form-background);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 26rem;
+  box-shadow: 0 1px 6px 0px #22031f;
+}

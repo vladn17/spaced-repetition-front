@@ -1,0 +1,23 @@
+.toastsContainer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  pointer-events: all;
+}

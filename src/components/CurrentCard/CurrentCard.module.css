@@ -1,0 +1,67 @@
+.currentCard {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: #fffffe;
+  box-shadow: 0px 0px 2px 0px rgba(127, 90, 240, 0.4),
+    0px 1px 2px 0px rgba(127, 90, 240, 0.4);
+}
+
+.cardInnerBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(0 0 0 / 38%);
+}
+
+.question {
+  background: var(--card-front-background);
+}
+
+.answer {
+  background: var(--card-back-background);
+}
+
+.text {
+  font-size: 2rem;
+  text-align: center;
+  overflow-x: auto;
+  word-break: break-word;
+  white-space: pre-line;
+  margin: 1rem 0 0 0;
+}
+
+.buttonsBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardButton {
+  margin: 0.5rem;
+}
+
+.rotateButton {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+@media (max-width: 360px) {
+  .currentCard {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+  .currentCard {
+    height: 60vh;
+  }
+}

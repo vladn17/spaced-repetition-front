@@ -1,0 +1,19 @@
+.header {
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerActions {
+  display: flex;
+}
+
+.title {
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: 'Exo', sans-serif;
+  font-size: 2rem;
+}

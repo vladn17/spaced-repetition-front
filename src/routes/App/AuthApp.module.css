@@ -1,0 +1,11 @@
+.app {
+  background-color: var(--color-background);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.routesContainer {
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 1rem;
+}

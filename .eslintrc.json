@@ -1,0 +1,64 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "@typescript-eslint",
+        "react-hooks",
+        "jest"
+    ],
+    "ignorePatterns": ["src/types"],
+    "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/prop-types": "off",
+        "prefer-const": "off"
+    },
+    "overrides": [
+        {
+            "files": ["**/*.test.tsx"],
+            "env": {
+                "jest": true
+            },
+            "extends": ["plugin:jest/recommended"],
+            "rules": {
+                "@typescript-eslint/no-empty-function": "off"
+            }
+        },
+        {
+            "files": ["*.js"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ]
+}
