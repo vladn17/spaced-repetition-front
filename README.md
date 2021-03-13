@@ -1,6 +1,8 @@
 # Spaced repetition app frontend
 
 Made with React and Apollo client
+- [Backend source code](https://github.com/vladn17/spaced-repetition-back)
+- [Deployed demo project](https://spacedrepeat.surge.sh/)
 
 ## Installation
 
