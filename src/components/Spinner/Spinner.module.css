@@ -50,5 +50,5 @@ button .spinner {
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 99;
+  z-index: 1;
 }
