@@ -4,6 +4,12 @@
   box-sizing: inherit;
 }
 
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 :root {
   box-sizing: border-box;
   line-height: 1.25;
